@@ -34,7 +34,28 @@ function processStrings(arr) {
     };
 }
 
-// Example usage
-const exampleArray = ['hello', 'world', 'javascript', 'is', 'fun']; // Sample array of strings
-const result = processStrings(exampleArray); // Call the function with the sample array
-console.log(result); // Log the result to the console
+// Testing the function with different arrays of strings
+
+// Test Case 1: Mixed lengths
+const testCase1 = ['hello', 'world', 'javascript', 'is', 'fun'];
+console.log("Test Case 1 Result:", processStrings(testCase1));
+
+// Test Case 2: All even lengths
+const testCase2 = ['abcd', 'efghij', 'klmno', 'pqrs'];
+console.log("Test Case 2 Result:", processStrings(testCase2));
+
+// Test Case 3: All odd lengths
+const testCase3 = ['a', 'abc', 'abcde', 'abcdefg'];
+console.log("Test Case 3 Result:", processStrings(testCase3));
+
+// Test Case 4: Empty array
+const testCase4 = [];
+console.log("Test Case 4 Result:", processStrings(testCase4));
+
+// Test Case 5: Array with special characters and numbers
+const testCase5 = ['12abc', 'def!@#', 'ghi123', '&*()'];
+console.log("Test Case 5 Result:", processStrings(testCase5));
+
+// Test Case 6: Long strings
+const testCase6 = ['thisisaverylongstringthatshouldbeeven', 'short', 'tiny'];
+console.log("Test Case 6 Result:", processStrings(testCase6));
