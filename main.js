@@ -71,22 +71,86 @@
 // console.log(grade(10));
 
 
-function difficulty(input) {
-    switch (input) {
-        case 1:
-            return "Easy";
-        case 2:
-            return "Medium";
-        case 3:
-            return "Hard";
-        default:
-            return "Error";
+// function difficulty(input) {
+//     switch (input) {
+//         case 1:
+//             return "Easy";
+//         case 2:
+//             return "Medium";
+//         case 3:
+//             return "Hard";
+//         default:
+//             return "Error";
+//     }
+// }
+
+// // Test cases
+// console.log(difficulty(1)); // Output: "Easy"
+// console.log(difficulty(2)); // Output: "Medium"
+// console.log(difficulty(3)); // Output: "Hard"
+// console.log(difficulty(0)); // Output: "Error"
+// console.log(difficulty(4)); // Output: "Error"
+
+let nums = [10, 6, 22, -7, 3];
+
+// Calling and logging the results of each function to find the highest number
+console.log("Highest for-of loop: " + highestForOfLoop(nums));
+console.log("Highest for loop: " + highestForLoop(nums));
+console.log("Highest while loop: " + highestWhileLoop(nums));
+console.log("Highest do-while loop: " + highestDoWhileLoop(nums));
+
+// Function using for-of loop to find the highest number
+function highestForOfLoop(nums) {
+    let highest = nums[0]; // Initialize highest with the first element of the array
+    // Iterate through each number in the nums array
+    for (const num of nums) {
+        // If the current number is greater than the current highest, update highest
+        if (num > highest) {
+            highest = num;
+        }
     }
+    return highest; // Return the highest number found
 }
 
-// Test cases
-console.log(difficulty(1)); // Output: "Easy"
-console.log(difficulty(2)); // Output: "Medium"
-console.log(difficulty(3)); // Output: "Hard"
-console.log(difficulty(0)); // Output: "Error"
-console.log(difficulty(4)); // Output: "Error"
+// Function using traditional for loop to find the highest number
+function highestForLoop(nums) {
+    let highest = nums[0]; // Initialize highest with the first element of the array
+    // Use a for loop to iterate through the array elements by index
+    for (let i = 0; i < nums.length; i++) {
+        // If the current element is greater than the current highest, update highest
+        if (nums[i] > highest) {
+            highest = nums[i];
+        }
+    }
+    return highest; // Return the highest number found
+}
+
+// Function using while loop to find the highest number
+function highestWhileLoop(nums) {
+    let highest = nums[0]; // Initialize highest with the first element of the array
+    let i = 0; // Start with the first index
+    // Use a while loop to iterate through the array until the end
+    while (i < nums.length) {
+        // If the current element is greater than the current highest, update highest
+        if (nums[i] > highest) {
+            highest = nums[i];
+        }
+        i++; // Increment the index
+    }
+    return highest; // Return the highest number found
+}
+
+// Function using do-while loop to find the highest number
+function highestDoWhileLoop(nums) {
+    let highest = nums[0]; // Initialize highest with the first element of the array
+    let i = 0; // Start with the first index
+    do {
+        // If the current element is greater than the current highest, update highest
+        if (nums[i] > highest) {
+            highest = nums[i];
+        }
+        i++; // Increment the index
+    } while (i < nums.length); // Continue looping until it reaches the end of the array
+    return highest; // Return the highest number found
+}
+
