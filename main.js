@@ -91,66 +91,104 @@
 // console.log(difficulty(0)); // Output: "Error"
 // console.log(difficulty(4)); // Output: "Error"
 
-let nums = [10, 6, 22, -7, 3];
+// let nums = [10, 6, 22, -7, 3];
 
-// Calling and logging the results of each function to find the highest number
-console.log("Highest for-of loop: " + highestForOfLoop(nums));
-console.log("Highest for loop: " + highestForLoop(nums));
-console.log("Highest while loop: " + highestWhileLoop(nums));
-console.log("Highest do-while loop: " + highestDoWhileLoop(nums));
+// // Calling and logging the results of each function to find the highest number
+// console.log("Highest for-of loop: " + highestForOfLoop(nums));
+// console.log("Highest for loop: " + highestForLoop(nums));
+// console.log("Highest while loop: " + highestWhileLoop(nums));
+// console.log("Highest do-while loop: " + highestDoWhileLoop(nums));
 
-// Function using for-of loop to find the highest number
-function highestForOfLoop(nums) {
-    let highest = nums[0]; // Initialize highest with the first element of the array
-    // Iterate through each number in the nums array
-    for (const num of nums) {
-        // If the current number is greater than the current highest, update highest
-        if (num > highest) {
-            highest = num;
-        }
+// // Function using for-of loop to find the highest number
+// function highestForOfLoop(nums) {
+//     let highest = nums[0]; // Initialize highest with the first element of the array
+//     // Iterate through each number in the nums array
+//     for (const num of nums) {
+//         // If the current number is greater than the current highest, update highest
+//         if (num > highest) {
+//             highest = num;
+//         }
+//     }
+//     return highest; // Return the highest number found
+// }
+
+// // Function using traditional for loop to find the highest number
+// function highestForLoop(nums) {
+//     let highest = nums[0]; // Initialize highest with the first element of the array
+//     // Use a for loop to iterate through the array elements by index
+//     for (let i = 0; i < nums.length; i++) {
+//         // If the current element is greater than the current highest, update highest
+//         if (nums[i] > highest) {
+//             highest = nums[i];
+//         }
+//     }
+//     return highest; // Return the highest number found
+// }
+
+// // Function using while loop to find the highest number
+// function highestWhileLoop(nums) {
+//     let highest = nums[0]; // Initialize highest with the first element of the array
+//     let i = 0; // Start with the first index
+//     // Use a while loop to iterate through the array until the end
+//     while (i < nums.length) {
+//         // If the current element is greater than the current highest, update highest
+//         if (nums[i] > highest) {
+//             highest = nums[i];
+//         }
+//         i++; // Increment the index
+//     }
+//     return highest; // Return the highest number found
+// }
+
+// // Function using do-while loop to find the highest number
+// function highestDoWhileLoop(nums) {
+//     let highest = nums[0]; // Initialize highest with the first element of the array
+//     let i = 0; // Start with the first index
+//     do {
+//         // If the current element is greater than the current highest, update highest
+//         if (nums[i] > highest) {
+//             highest = nums[i];
+//         }
+//         i++; // Increment the index
+//     } while (i < nums.length); // Continue looping until it reaches the end of the array
+//     return highest; // Return the highest number found
+// }
+
+// Creating a Function-Simple function to log an array of strings
+// function logStringArray(stringArray) {
+//     // Check if the input is an array
+//     if (!Array.isArray(stringArray)) {
+//         console.error("Input must be an array of strings.");
+//         return;
+//     }
+    
+//     // Log each string in the array
+//     stringArray.forEach(str => {
+//         console.log(str);
+//     });
+// }
+
+// // Example usage
+// const strings = ["Hello", "world!", "JavaScript", "is", "fun."];
+// logStringArray(strings);
+
+
+
+// Iterating Over the Array-Function to iterate over an array of strings and log each string
+function logStringArray(stringArray) {
+    // Check if the input is an array
+    if (!Array.isArray(stringArray)) {
+        console.error("Input must be an array of strings.");
+        return;
     }
-    return highest; // Return the highest number found
-}
 
-// Function using traditional for loop to find the highest number
-function highestForLoop(nums) {
-    let highest = nums[0]; // Initialize highest with the first element of the array
-    // Use a for loop to iterate through the array elements by index
-    for (let i = 0; i < nums.length; i++) {
-        // If the current element is greater than the current highest, update highest
-        if (nums[i] > highest) {
-            highest = nums[i];
-        }
+    // Iterate over the array using a loop
+    for (let i = 0; i < stringArray.length; i++) {
+        const currentString = stringArray[i]; // Get the current string
+        console.log(currentString); // Log the current string
     }
-    return highest; // Return the highest number found
 }
 
-// Function using while loop to find the highest number
-function highestWhileLoop(nums) {
-    let highest = nums[0]; // Initialize highest with the first element of the array
-    let i = 0; // Start with the first index
-    // Use a while loop to iterate through the array until the end
-    while (i < nums.length) {
-        // If the current element is greater than the current highest, update highest
-        if (nums[i] > highest) {
-            highest = nums[i];
-        }
-        i++; // Increment the index
-    }
-    return highest; // Return the highest number found
-}
-
-// Function using do-while loop to find the highest number
-function highestDoWhileLoop(nums) {
-    let highest = nums[0]; // Initialize highest with the first element of the array
-    let i = 0; // Start with the first index
-    do {
-        // If the current element is greater than the current highest, update highest
-        if (nums[i] > highest) {
-            highest = nums[i];
-        }
-        i++; // Increment the index
-    } while (i < nums.length); // Continue looping until it reaches the end of the array
-    return highest; // Return the highest number found
-}
-
+// Example usage
+const strings = ["Hello", "world!", "JavaScript", "is", "fun."];
+logStringArray(strings);
