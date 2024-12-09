@@ -7,4 +7,5 @@ export class Person {
     getFullname(){
         return this.firstname + " " + this.lastname;
     }
+    
 }
