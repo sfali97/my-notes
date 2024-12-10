@@ -1,8 +1,8 @@
 const axios = require('axios');
 
 const postcode = "M130YG";
-
-const apiUrl = `https://api.postcodes.io/postcodes/${postcode.toLowerCase()}`;
+const outcode = "M13";
+const apiUrl = `https://api.postcodes.io/outcodes/${outcode.toLowerCase()}`;
 
 var requestConfig = {
     method:'get',

@@ -2,14 +2,17 @@ const axios = require('axios');
 
 const postcode = "M130YG";
 
-const apiUrl = `https://api.postcodes.io/postcodes/${postcode.toLowerCase()}`;
+const apiUrl = `https://api.postcodes.io/postcodes`;
 
 var requestConfig = {
-    method:'get',
+    method:'post',
     url: apiUrl,
     headers:{
         'Accept': 'application/json',
         'Content-Type': 'application/json'
+    },
+    data:{
+        "postcodes" : ["M130YG","OX49 5NU"],
     }
 }
 
